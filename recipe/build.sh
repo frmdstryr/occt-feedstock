@@ -7,6 +7,7 @@ cmake -S . -B build  -G Ninja \
       -D CMAKE_BUILD_TYPE:STRING="Release" \
       -D BUILD_RELEASE_DISABLE_EXCEPTIONS=OFF \
       -D USE_VTK:BOOL=ON \
-      -D USE_FREEIMAGE:BOOL=ON
+      -D USE_FREEIMAGE:BOOL=ON \
+      -D USE_GLES2:BOOL=ON
 
 cmake --build build -- install

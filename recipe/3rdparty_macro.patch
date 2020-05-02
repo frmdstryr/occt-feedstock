@@ -1,0 +1,13 @@
+diff --git a/OCCT/adm/cmake/3rdparty_macro.cmake b/OCCT-patched/adm/cmake/3rdparty_macro.cmake
+index 7794a73..e5f3216 100644
+--- a/OCCT/adm/cmake/3rdparty_macro.cmake
++++ b/OCCT-patched/adm/cmake/3rdparty_macro.cmake
+@@ -122,7 +122,7 @@ macro (THIRDPARTY_PRODUCT PRODUCT_NAME HEADER_NAME LIBRARY_CSF_NAME LIBRARY_NAME
+       if (NOT 3RDPARTY_${PRODUCT_NAME}_LIBRARY_${LIBRARY_NAME_SUFFIX} OR NOT EXISTS "${3RDPARTY_${PRODUCT_NAME}_LIBRARY_${LIBRARY_NAME_SUFFIX}}")
+         set (CMAKE_FIND_LIBRARY_SUFFIXES .lib .so .dylib .a)
+ 
+-        set (${PRODUCT_NAME}_PATH_SUFFIXES lib)
++        set (${PRODUCT_NAME}_PATH_SUFFIXES lib lib64)
+         if (WIN32)
+           set (${PRODUCT_NAME}_PATH_SUFFIXES ${${PRODUCT_NAME}_PATH_SUFFIXES} win${COMPILER_BITNESS}/${COMPILER}/lib)
+         endif()

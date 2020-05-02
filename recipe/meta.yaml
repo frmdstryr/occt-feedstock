@@ -15,19 +15,21 @@ source:
     - fix-brepblend.patch
     - vtk.patch  # [linux]
     - cmake_policy.patch
+    - 3rdparty_macro.patch # [linux]
 
 build:
-  number: 6
+  number: 7
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake 3.16
     - ninja
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-libgl-devel') }}   # [linux]
     - {{ cdt('mesa-libegl-devel') }}  # [linux]
-    - {{ cdt('libxi-devel') }}       # [linux]
-    - {{ cdt('libxext-devel') }}     # [linux]
+    - {{ cdt('mesa-libgles-devel') }} # [linux]
+    - {{ cdt('libxi-devel') }}        # [linux]
+    - {{ cdt('libxext-devel') }}      # [linux]
   host:
     - freetype
     - freeimage
